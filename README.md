@@ -1,10 +1,32 @@
 # Bubble Sort
 
-Pre-work: [First, some Hungarian ("Csángó") folk dance](https://www.youtube.com/watch?v=lyZQPjUT5B4)
 
-Bubble sort is one of the first sorting algorithms you should try to master.  It essentially forces larger elements to 'sink' to the bottom/back while inadvertently 'floating' smaller elements to the top/front of a list.  This is done with numerous comparisons between one element in an array and its neighbor.  
+### Why is this important?
+<!-- framing the "why" in big-picture/real world examples -->
+*This workshop is important because:*
+
+Bubble sort is one of the first sorting algorithms you should master. While it isn't particularly efficient, it's simple and intuitive.  Bubble Sort compares neighboring elements and forces larger elements to 'bubble' to the end of an array while simultaneously 'floating' smaller elements to the top/front of a list.  This sorting algorithm is what you might do if you were asked to sort a list one by one.
+
+### What are the objectives?
+<!-- specific/measurable goal for students to achieve -->
+*After this workshop, developers will be able to:*
+
+- describe bubble sort algorithm and identify its advantages and disadvantages.
+- write a pseudocode version of bubble sort and a javascript version of bubble sort.
+- determine the runtime (in big-`O()` notation) for bubble sort.
+
+### Where should we be now?
+<!-- call out the skills that are prerequisites -->
+*Before this workshop, developers should already be able to:*
+
+- iterate through an array using a `for` loop, `forEach`, or other iterators.
+- describe the purpose of big-`O()` notation.
 
 ## What? Bubble Sort?
+[First, some Hungarian ("Csángó") folk dance](https://www.youtube.com/watch?v=lyZQPjUT5B4)
+
+![image](https://media.giphy.com/media/1161BCev99OuRi/giphy.gif)
+
 
 Here's the basic idea of the Bubble Sort algorithm:
 
@@ -17,7 +39,7 @@ Here's the basic idea of the Bubble Sort algorithm:
 #### Bubble Sort Animated
 <figure>
 <a title="By Swfung8 (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABubble-sort-example-300px.gif"><img width="400" alt="Bubble-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"/></a><br>
-<figcaption>Image: By Swfung8 (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons</figcaption>
+<figcaption>Image: By Swfung8 (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) or [GFDL](http://www.gnu.org/copyleft/fdl.html), via Wikimedia Commons</figcaption>
 </figure>
 
 
@@ -41,7 +63,7 @@ If an element on the left (5) is greater than the element on the right (4), the 
 
 3: [4, 2, 3, **5, 1**, 6] ⇨ [4, 2, 3, **1, 5**, 6] <sub>SWAP!</sub>
 
-4: [4, 2, 3, 1, **5, 6**] ⇨ [4, 2, 3, 1, **5, 6**] <sub>same</sub>
+4: [4, 2, 3, 1, **5, 6**] ⇨ [4, 2, 3, 1, **5, 6**] <sub>order is correct, don't swap</sub>
 
 
 **Important:** We now know that the last element in the list is the largest element in the list. There's no need to do a comparison with that number ever again.
@@ -55,7 +77,7 @@ If an element on the left (5) is greater than the element on the right (4), the 
 
 2: [2, 3, **4, 1**, 5, ~~6~~] ⇨ [2, 3, **1, 4**, 5, ~~6~~]  <sub>SWAP!</sub>
 
-3: [2, 3, 1, **4, 5**, ~~6~~] ⇨ [2, 3, 1, **4, 5**, ~~6~~]  <sub>same</sub>
+3: [2, 3, 1, **4, 5**, ~~6~~] ⇨ [2, 3, 1, **4, 5**, ~~6~~]  <sub>order is correct, don't swap</sub>
 
 Stop!
 
@@ -64,13 +86,13 @@ Remember: we know that last element is the largest number in the list.  There is
 #### Iteration 3
 
 
-0: [**2, 3**, 1, 4, ~~5, 6~~] ⇨ [**2, 3**, 1, 4, ~~5, 6~~] <sub>same</sub>
+0: [**2, 3**, 1, 4, ~~5, 6~~] ⇨ [**2, 3**, 1, 4, ~~5, 6~~] <sub>order is correct, don't swap</sub>
 
 If an element on the left has met a larger or equal element, we look at its bigger neighbor and now compare the larger neighbor to it's neighbor on the right.  The process is continued until our established end.
 
 1: [2, **3, 1**, 4, ~~5, 6~~] ⇨ [2, **1, 3**, 4, ~~5, 6~~] <sub>SWAP!</sub>
 
-2: [2, 1, **3, 4**, ~~5, 6~~] ⇨ [2, 1, **3, 4**, ~~5, 6~~] <sub>same</sub>
+2: [2, 1, **3, 4**, ~~5, 6~~] ⇨ [2, 1, **3, 4**, ~~5, 6~~] <sub>order is correct, don't swap</sub>
 
 Stop!
 
@@ -96,7 +118,33 @@ When there is **only one element** (the first element) left in our unsorted list
 
 <br>
 <br>
-![](http://cdn2.crunchify.com/wp-content/uploads/2013/01/BubbleSort-Algorithm-Crunchify.jpg)
+![](https://cloud.githubusercontent.com/assets/6520345/15079536/eb15b6bc-136d-11e6-829c-91489b3af47b.png)
+
+## Efficiency
+
+In big-`O()` notation, what is the runtime of Bubble sort?
+
+Hints:
+<details><summary>
+How many comparisons will you need to make to cycle through the array once?</summary>
+You make `n` comparisons each time you move through the array.
+</details>
+<details><summary>
+In the worst case, how many times do you need to cycle through the array?</summary>
+You might have to cycle through the array `n` times.
+</details>
+
+<details><summary>
+Given the answer to the two questions above, how many comparisons did you need to make?</summary>
+You made `n` comparisons `n` times. That means you made `n * n` comparisons or n<sup>2</sup> . That makes this algorithm O(n<sup>2</sup>).
+</details>
+
+
+#### [So, is this a fast algorithm?](https://www.toptal.com/developers/sorting-algorithms/)
+
+When does it perform well?
+
+
 
 ## Challenge
 
