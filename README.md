@@ -39,8 +39,9 @@ Here's the basic idea of the Bubble Sort algorithm:
 #### Bubble Sort Animated
 <figure>
 <a title="By Swfung8 (Own work) [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0) or GFDL (http://www.gnu.org/copyleft/fdl.html)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABubble-sort-example-300px.gif"><img width="400" alt="Bubble-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"/></a><br>
-<figcaption>Image: By Swfung8 (Own work) [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) or [GFDL](http://www.gnu.org/copyleft/fdl.html), via Wikimedia Commons</figcaption>
 </figure>
+
+<sup>^ Animation by Swfung8 [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) or [GFDL](http://www.gnu.org/copyleft/fdl.html), via Wikimedia Commons</sup>
 
 
 
