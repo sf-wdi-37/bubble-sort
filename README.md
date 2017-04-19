@@ -1,3 +1,5 @@
+<img src="https://avatars2.githubusercontent.com/u/26232645?v=3&s=200" width="60px" alt="GA logo"></img>
+
 # Bubble Sort
 
 
