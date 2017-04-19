@@ -13,14 +13,14 @@ Bubble sort is one of the first sorting algorithms you should master. While it i
 
 - describe bubble sort algorithm and identify its advantages and disadvantages.
 - write a pseudocode version of bubble sort and a javascript version of bubble sort.
-- determine the runtime (in big-`O()` notation) for bubble sort.
+- determine the runtime (in Big O notation) for bubble sort.
 
 ### Where should we be now?
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
 - iterate through an array using a `for` loop, `forEach`, or other iterators.
-- describe the purpose of big-`O()` notation.
+- describe the purpose of Big O notation.
 
 ## What? Bubble Sort?
 [First, some Hungarian ("Csángó") folk dance](https://www.youtube.com/watch?v=lyZQPjUT5B4)
@@ -122,21 +122,21 @@ When there is **only one element** (the first element) left in our unsorted list
 
 ## Efficiency
 
-In big-`O()` notation, what is the runtime of Bubble sort? How do you know?! Justify your answer here.
+In Big O notation, what is the runtime of Bubble sort? How do you know?! Justify your answer here.
 
 Hints:
 <details><summary>
 How many comparisons will you need to make to cycle through the array once?</summary>
-You make `n` comparisons each time you move through the array.
+You make <code>n</code> comparisons each time you move through the array.
 </details>
 <details><summary>
 In the worst case, how many times do you need to cycle through the array?</summary>
-You might have to cycle through the array `n` times.
+You might have to cycle through the array <code>n</code> times.
 </details>
 
 <details><summary>
 Given the answer to the two questions above, how many comparisons did you need to make?</summary>
-You made `n` comparisons `n` times. That means you made `n * n` comparisons or n<sup>2</sup> . That makes this algorithm O(n<sup>2</sup>).
+You made <code>n</code> comparisons <code>n</code> times. That means you made <code>n*n</code> comparisons or <code>n</code><sup><code>2</code></sup> . That makes this algorithm <code>O(n</code><sup><code>2</code></sup><code>)</code>.
 </details>
 
 
@@ -148,7 +148,7 @@ When does it perform well?
 
 ## Challenge
 
-**Create a `bubbleSort` function that takes in an array of numbers, uses the bubble sort algorithm on it, and returns the sorted array.**
+In a new file, **create a `bubbleSort` function that takes in an array of numbers, uses the bubble sort algorithm on it, and returns the sorted array.**
 
 * Work with a partner to implement the algorithm on the whiteboard.
 * Start with pseudocode before moving into actual code.
@@ -164,32 +164,42 @@ When does it perform well?
 #### Hints:
 
 <details><summary>
-Start off by building pieces of the whole funciton.
+Start with your function stub, and build up pieces from there.
 </summary>
-- build the capacity to swap the first two elements if the first is greater than the second.
-- build the capacity to loop through the whole array swapping whenever it's appropriate.
+
+- write pseudocode or code to swap two elements if the first is greater than the second.  
+
+- write pseudocode or code to loop through the whole array swapping whenever it's appropriate.  
+
 - make sure you cycle through the array enough times to ensure the list is sorted.
+
+- fill in any pseudocode or planning comments with full-fledged code.
+
 </details>
 
 <details><summary>
-If you want to swap two variables, a and b:
+If you want to swap two variables, <code>a</code> and <code>b</code>:
 </summary>
-```javascript
-// bubbleSort.js  (you'll need to create this)
 
-var a, b, temp;
-temp = a;
-a = b;
-b = temp;
-```
+      var a, b;
+
+      // ES5
+      var temp = a;
+      a = b;
+      b = temp;
+
+      // ES6 with array destructuring
+      [a,b] = [b,a];
+
 </details>
+
 <details><summary>
 Don't worry about efficiency the first time through.
 </summary>
-After you have a working version, spend time figuring out how you could cut corners to make the algorithm to be more efficient.
+After you have a working version, then you can spend time figuring out how you could cut corners to make the algorithm to be more efficient. 
 </details>
 
-A conventional for loop is probably a good idea on this one.
+A conventional for loop is probably a good idea for this problem.
 
 
 
